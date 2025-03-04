@@ -157,6 +157,12 @@ function assetLoaded() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  let splashElements = document.querySelectorAll('div:not(main)');
+  splashElements.forEach(el => {
+    if (el.innerText && el.innerText.includes('MADE WITH P5 PLAY')) {
+      el.style.display = 'none';
+    }
+  });
     // setupSerial();
 
   // Initialize the game sketch elements here
@@ -164,6 +170,13 @@ function setup() {
 }
 
 function draw() {
+  // Check for splash screen again (in case it reappears)
+  let splashElements = document.querySelectorAll('div:not(main)');
+  splashElements.forEach(el => {
+    if (el.innerText && el.innerText.includes('MADE WITH P5 PLAY')) {
+      el.style.display = 'none';
+    }
+  });
   if (isLoading) {
     drawLoadingScreen();
   } else {
