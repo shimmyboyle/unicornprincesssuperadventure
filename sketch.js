@@ -294,7 +294,7 @@ function setupGameSketch() {
   // Create a new sprite for the unicorn
 // Create a new sprite for the unicorn
   // Create a new sprite for the unicorn
-  unicorn = new Sprite(width / 2, (height / 4) * 3 - 180, 50, 180);
+  unicorn = new Sprite(width / 2, (height / 4) * 3 - 180, 50, 350);
   unicorn.img = unicornImage;
   unicorn.frameIndex = 0;
   unicorn.isMoving = false;
